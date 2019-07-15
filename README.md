@@ -107,7 +107,7 @@ print(cityByLengthOfName)
 ```
 
 
-## Question 6
+## Question 6 √
 
 `let citiesWithPopulation: [(String, Int)] = [("Shanghai", 24256800), ("Beijing", 21516000), ("Delhi", 16787941), ("Lagos", 16060303), ("Tianjin", 15200000), ("Karachi", 14910352), ("Karachi", 14160467), ("Tokyo", 13513734), ("Guangzhou", 13080500), ("Mumbai", 12442373), ("Moscow", 12380664), ("São Paulo", 12038175)]`
 
@@ -115,6 +115,14 @@ a. Use `sortedBy` to sort `citiesWithPopulation` in ascending order of populatio
 
 b. Use `sortedBy` to sort `citiesWithPopulation` in reverse alphabetical order of the last character in the city name.
 
+```swift
+let ascendingOrderCities = citiesWithPopulation.sorted(by: {$0.1 < $1.1})
+print(ascendingOrderCities)
+
+let reverseAlphaOrderOfLastChar = citiesWithPopulation.sorted(by: { String($0.0.reversed()) < String($1.0.reversed()) })
+print(reverseAlphaOrderOfLastChar)
+
+```
 
 ## Question 7
 
