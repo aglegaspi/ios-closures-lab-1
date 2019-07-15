@@ -195,7 +195,7 @@ forEach([1, 2, 3, 4],{ print($0 * $0) })
 ```
 
 
-## Question 10
+## Question 10 √
 
 Implement a function `combineArrays` that takes 2 arrays and a closure that combines 2 Ints into a single Int. The function combines the two arrays into a single array using the provided closure. Assume that the 2 arrays have equal length.
 
@@ -211,6 +211,28 @@ combineArrays(array1,array2) {
 ```
 
 Output: `[5,10,15,12]`
+
+```swift
+let array1 = [1,2,3,4]
+let array2 = [5,5,5,3]
+
+func combineArrays(_ array1: [Int],_ array2: [Int], _ closure: (Int,Int) -> [Int] ) {
+    var result = [Int]()
+    
+    for (arr1index,arr1value) in array1.enumerated() {
+        for (arr2index,arr2value) in array2.enumerated() {
+            
+            if arr1index == arr2index {
+                let output = closure(arr1value,arr2value)
+                result.append(output[0])
+            }
+        }
+    }
+    print(result)
+}
+
+combineArrays(array1, array2,{ [$0 * $1] })
+```
 
 
 ## Question 11
