@@ -63,7 +63,7 @@ Input: `let numbers = [4, 7, 1, 9, 6, 5, 6, 9]`
 Output: `9`
 
 
-## Question 4
+## Question 4 √
 
 Join all the strings from `strings` into one using `reduce`. Add spaces in between strings. Print your result.
 
@@ -72,8 +72,14 @@ Input: `let strings = ["We", "Heart", "Swift"]`
 
 Output: `"We Heart Swift"`
 
+```swift
+let strings = ["We", "Heart", "Swift"]
 
-## Question 5
+let joinStrings = strings.reduce(Strin,{"\($0) \($1)"})
+print(joinStrings)
+```
+
+## Question 5 
 
 `let cities = ["Shanghai", "Beijing", "Delhi", "Lagos", "Tianjin", "Karachi", "Karachi", "Tokyo", "Guangzhou", "Mumbai", "Moscow", "São Paulo"]`
 
