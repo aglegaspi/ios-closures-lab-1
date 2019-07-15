@@ -53,7 +53,7 @@ let multiples = numbers.filter({$0 % 3 == 0})
 print(multiples)
 ```
 
-## Question 3
+## Question 3 √
 
 Find the largest number from `numbers` and then print it. Use `reduce` to solve this exercise.
 
@@ -61,6 +61,12 @@ Example:
 Input: `let numbers = [4, 7, 1, 9, 6, 5, 6, 9]`
 
 Output: `9`
+
+```swift
+let numbers = [4, 7, 1, 9, 6, 5, 6, 9]
+let largestNumber = numbers.reduce(0, {$0 > $1 ? $0 : $1})
+print(largestNumber)
+```
 
 
 ## Question 4 √
@@ -79,7 +85,7 @@ let joinStrings = strings.reduce(Strin,{"\($0) \($1)"})
 print(joinStrings)
 ```
 
-## Question 5 
+## Question 5 √
 
 `let cities = ["Shanghai", "Beijing", "Delhi", "Lagos", "Tianjin", "Karachi", "Karachi", "Tokyo", "Guangzhou", "Mumbai", "Moscow", "São Paulo"]`
 
@@ -88,6 +94,17 @@ a. Use `sortedBy` to sort `cities` in alphabetical order.
 b. Use `sortedBy` to sort `cities` alphabetical order of the second character of the city name.
 
 c. Use `sortedBy` to sort `cities` in order of the length of the city name.
+
+```swift
+let alphabeticOrderOfCities = cities.sorted(by: { $0 < $1 })
+print(alphabeticOrderOfCities)
+
+let alphaSecondCharCities = cities.sorted(by: { $0.dropFirst() < $1.dropFirst()})
+print(alphaSecondCharCities)
+
+let cityByLengthOfName = cities.sorted(by: {$0.count < $1.count})
+print(cityByLengthOfName)
+```
 
 
 ## Question 6
