@@ -2,7 +2,7 @@
 
 Fork and clone this repo. On your fork, answer and commit the follow questions. When you are finished, submit the link to your repo on Canvas.
 
-## Question 1
+## Question 1 √
 
 Write a function named `applyKTimes` that takes an integer `K` and a closure and calls the closure K times. The closure will not take any parameters and will not have a return value.
 
@@ -23,6 +23,15 @@ Output:
 Hello Closures!
 Hello Closures!
 Hello Closures!
+```
+
+```swift 
+func applyKTimes(_ K: Int, _ closure: () -> ()) {
+    for _ in 1...K {
+        closure()
+    }
+}
+applyKTimes(3,{print("Hello Closures!")})
 ```
 
 
