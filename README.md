@@ -163,7 +163,7 @@ let getItTogether = numbers.map({$0 * $0}).filter({$0 % 2 == 1}).reduce(0,+)
 print(getItTogether)
 ```
 
-## Question 9
+## Question 9 √
 
 Implement a function `forEach(array: [Int], _ closure: Int -> ())` that takes an array of integers and a closure and runs the closure for each element of the array.
 
@@ -184,6 +184,16 @@ Output:
 9
 16
 ```
+```swift
+func forEach(_ array: [Int], _ closure: (Int) -> ()) {
+    for number in array {
+        closure(number)
+    }
+}
+
+forEach([1, 2, 3, 4],{ print($0 * $0) })
+```
+
 
 ## Question 10
 
