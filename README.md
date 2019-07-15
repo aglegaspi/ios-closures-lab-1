@@ -281,7 +281,7 @@ let descendingOrder =
 ```
 
 
-## Question 13
+## Question 13  √
 
 `let arrayOfArrays = [[3,65,2,4],[25,3,1,6],[245,2,3,5,74]]`
 
@@ -289,6 +289,13 @@ a) Sort `arrayOfArrays` in ascending order by the **3rd element** in each array.
 
 b) Sort `arrayOfArrays` in ascending order by the 3rd element in each array. Don't assume each array will have at least 3 elements. Put all arrays that have less than 3 elements at the end in any order.
 
+```swift
+let arrayOfArrays = [[3,65,2,4],[25,3,1,6],[245,2,3,5,74]]
+
+let sortByThird = arrayOfArrays.sorted(by: {$0[2] < $1[2]})
+print(sortByThird)
+
+```
 
 ## Question 14
 
