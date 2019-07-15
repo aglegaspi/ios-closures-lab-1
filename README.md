@@ -128,13 +128,9 @@ print(reverseAlphaOrderOfLastChar)
 
 Sort `numbers` in ascending order by the number of divisors. If two numbers have the same number of divisors the order in which they appear in the sorted array does not matter.
 
-`var numbers = [1, 2, 3, 4, 5, 6]`
-
-Example:
-Input: `var numbers = [1, 2, 3, 4, 5, 6]`
+Example: Input: `var numbers = [1, 2, 3, 4, 5, 6]`
 
 Output:
-
 ```swift
 numbers = [1, 2, 3, 5, 4, 6]
 // 1 has one divisor
@@ -146,18 +142,15 @@ numbers = [1, 2, 3, 5, 4, 6]
 ```
 
 
-## Question 8
+## Question 8 √
 
 Find the sum of the squares of all the odd numbers from `numbers` and then print it.
 
 `var numbers = [1, 2, 3, 4, 5, 6]`
 
 a. Write code that removes all the odd numbers from the array.
-
 b. Write code that squares all the numbers in the array.
-
 c. Write code that finds the sum of the array.
-
 d. Now use `map`, `filter` and `reduce` to solve this problem.
 
 Example:
@@ -165,6 +158,10 @@ Input: `var numbers = [1, 2, 3, 4, 5, 6]`
 
 Output: `35 // 1 + 9 + 25 -> 35`
 
+```swift
+let getItTogether = numbers.map({$0 * $0}).filter({$0 % 2 == 1}).reduce(0,+)
+print(getItTogether)
+```
 
 ## Question 9
 
