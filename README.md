@@ -26,7 +26,7 @@ Hello Closures!
 ```
 
 
-## Question 2
+## Question 2 √
 
 Use `filter` to create an array called `multiples` that contains all the multiples of 3 from `numbers` and then print it.
 
@@ -37,6 +37,12 @@ Input: `let numbers = [1, 2, 3, 4, 6, 8, 9, 3, 12, 11]`
 
 Expected values: `multiples = [3, 6, 9, 3, 12]`
 
+```swift
+let numbers = [1, 2, 3, 4, 6, 8, 9, 3, 12, 11]
+
+let multiples = numbers.filter({$0 % 3 == 0})
+print(multiples)
+```
 
 ## Question 3
 
