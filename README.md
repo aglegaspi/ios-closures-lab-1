@@ -213,25 +213,20 @@ combineArrays(array1,array2) {
 Output: `[5,10,15,12]`
 
 ```swift
-let array1 = [1,2,3,4]
-let array2 = [5,5,5,3]
-
-func combineArrays(_ array1: [Int],_ array2: [Int], _ closure: (Int,Int) -> [Int] ) {
-    var result = [Int]()
+    let array1 = [1,2,3,4]
+    let array2 = [5,5,5,3]
     
-    for (arr1index,arr1value) in array1.enumerated() {
-        for (arr2index,arr2value) in array2.enumerated() {
-            
-            if arr1index == arr2index {
-                let output = closure(arr1value,arr2value)
-                result.append(output[0])
-            }
+    func combineArrays2(_ array1: [Int],_ array2: [Int], _ closure: (Int,Int) -> Int ) -> [Int] {
+        var result = [Int]()
+        
+        for i in 0..<array1.count {
+            let arr1Val = array1[i]
+            let arr2Val = array2[i]
+            result.append(closure(arr1Val, arr2Val))
         }
+        return result
     }
-    print(result)
-}
-
-combineArrays(array1, array2,{ [$0 * $1] })
+    print(combineArrays2(array1, array2, *))
 ```
 
 
